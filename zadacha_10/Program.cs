@@ -3,11 +3,11 @@
 // 782 -> 8
 // 918 -> 1
 
-Console.Clear();                                     //очистить консоль на старте
+Console.Clear();                                    //очистить консоль на старте
 
 Console.WriteLine("Введите трехзначиное число ");   //просим ввести число
-int number = int.Parse(Console.ReadLine());         //запоминаем введенное число
+int numberIn = int.Parse(Console.ReadLine());       //запоминаем введенное число
 
-int second = (number/10)%10;                        //определяем 2 цифру числа
+int secondDigit = (numberIn / 10) % 10;             //определяем 2 цифру числа
 
-Console.WriteLine($"-> {second}");                  //выводим результат
+Console.WriteLine($"-> {secondDigit}");             //выводим результат
