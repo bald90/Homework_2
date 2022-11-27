@@ -6,17 +6,20 @@
 
 Console.Clear();
 
-Console.WriteLine("Введите трехзначиное число ");   //просим ввести число
-int numberIn = int.Parse(Console.ReadLine());       //запоминаем введенное число
+Console.WriteLine("Введите трехзначиное число ");     //просим ввести число
+int numberIn = int.Parse(Console.ReadLine());         //запоминаем введенное число
 
-if (numberIn < 100) Console.WriteLine("-> третьей цифры нет");             //выводим результат
-else 
+if (numberIn < 100)                                   //отсеиваем двузначные числа
 {
-while (numberIn > 999)
-{
-    numberIn = numberIn / 10;
-
+    Console.WriteLine("-> третьей цифры нет");        //выводим результат
 }
-int thirdDigit = numberIn % 10;             //определяем 3 цифру числа
-Console.WriteLine($"-> {thirdDigit}");
+else
+{
+    while (numberIn > 999)                            //цикл...сокращаем любое число до трехзначного
+    {
+        numberIn = numberIn / 10;
+
+    }
+    int thirdDigit = numberIn % 10;                  //определяем 3 цифру nтрехзначного числа
+    Console.WriteLine($"-> {thirdDigit}");           //выводим результат
 }
